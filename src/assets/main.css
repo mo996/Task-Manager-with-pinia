@@ -1,0 +1,200 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+
+:root {
+    --primary-color: #2196F3;
+    --secondary-color: #FFC107;
+    --background-color: #F5F5F5;
+    --text-color: #615f5f;
+}
+
+/* General Body Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    max-width: 80px;
+    margin-right: 20px;
+    transform: rotate(-20deg);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Task List */
+.task-list {
+    max-width: 640px;
+    margin: 20px auto;
+    padding: 0;
+    list-style: none;
+}
+
+.task {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.task:hover {
+    background-color: var(--background-color);
+}
+
+.task h3 {
+    font-size: 1.2em;
+    margin: 0;
+    flex-grow: 1;
+    color: var(--text-color);
+}
+
+.task .icons {
+    display: flex;
+    align-items: center;
+}
+
+.task i {
+    font-size: 1.4em;
+    margin-left: 10px;
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: color 0.2s ease;
+}
+
+.task i.favorited {
+    color: red;
+}
+
+.task i:hover {
+    color: var(--primary-color);
+}
+
+/* Filter Nav */
+.filter {
+    max-width: 640px;
+    margin: 10px auto;
+    text-align: right;
+}
+
+.filter button {
+    display: inline-block;
+    margin: 5px;
+    background: white;
+    border: 2px solid var(--text-color);
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter button:hover {
+    background-color: var(--background-color);
+    border-color: var(--primary-color);
+}
+
+.filter button.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* New Task Form */
+.new-task-form {
+    background-color: var(--background-color);
+    padding: 20px 0;
+}
+
+.new-task-form form {
+    max-width: 640px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+}
+
+.new-task-form button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.new-task-form button:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+.new-task-form input {
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1em;
+    font-family: "Poppins", sans-serif;
+}
+
+/* loading state */
+.loading {
+    max-width: 640px;
+    border: 1px solid var(--secondary-color);
+    /* Use secondary color for border */
+    background-color: var(--background-color);
+    /* Match the background */
+    color: var(--text-color);
+    /* Match the text color */
+    padding: 15px 0;
+    /* Increase padding for better visibility */
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 8px;
+    /* Add rounded corners */
+    font-weight: 500;
+    /* Slightly bolder text */
+    animation: pulse 1s infinite;
+    /* Add a subtle pulse animation */
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
